@@ -99,8 +99,8 @@ let HomeInventory = {
 
 // Commit all data to lacal storage with JSON
   
-const homeInventoryString = JSON.stringify(HomeInventory)
+let homeInventoryString = JSON.stringify(HomeInventory)
 localStorage.setItem("homeInventory", homeInventoryString)
 
-const storedInventory = JSON.parse(localStorage.getItem("homeInventory"))
+// const storedInventory = JSON.parse(localStorage.getItem("homeInventory"))
 
