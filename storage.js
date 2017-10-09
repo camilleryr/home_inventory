@@ -1,3 +1,5 @@
+// Define Intems in home
+
 const _76musicman = {
     "name": "1976 Musicman",
     "type": "instrument",
@@ -12,7 +14,7 @@ const jackCassidy = {
     "description": "Workhorse live bass - bought with money I won in a raffle at a Thortons"
 }
 
-const momsClassica = {
+const momsClassical = {
     "name": "Moms Classical Guitar",
     "type": "instrument",
     "location": "Guest Bedroom",
@@ -67,3 +69,38 @@ const catBirdSeat = {
     "location": "Kitchen",
     "description": "Menu from my birthday trip to Cat Bird Seat"
 }
+
+// Classify items into arrays based on type
+
+let instrument = []
+let furniture = []
+let memory = []
+
+instrument.push(_76musicman)
+instrument.push(momsClassical)
+instrument.push(jackCassidy)
+
+furniture.push(tvConsole)
+furniture.push(flossCabinet)
+furniture.push(vanity)
+furniture.push(hexTable)
+
+memory.push(weddingPhoto)
+memory.push(marwencolPrint)
+memory.push(catBirdSeat)
+
+// Define databse of all objects
+
+let HomeInventory = {
+    "instrument": instrument,
+    "furniture": furniture,
+    "memory": memory,
+}
+
+// Commit all data to lacal storage with JSON
+  
+const homeInventoryString = JSON.stringify(HomeInventory)
+localStorage.setItem("homeInventory", homeInventoryString)
+
+const storedInventory = JSON.parse(localStorage.getItem("homeInventory"))
+
